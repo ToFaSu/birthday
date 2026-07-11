@@ -97,6 +97,8 @@
 
 .text1 {
     position: absolute;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
     top: 10%;
     left: 20%;
     padding: 1rem;
@@ -109,6 +111,8 @@
 
 .text2 {
     position: absolute;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
     bottom: 40%;
     left: 12%;
     padding: 1rem;
@@ -121,6 +125,8 @@
 
 .text3 {
     position: absolute;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
     bottom: 10%;
     left: 20%;
     padding: 1rem;
@@ -133,6 +139,8 @@
 
 .text4 {
     position: absolute;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
     top: 5%;
     right: 5%;
     padding: 1rem;
@@ -145,6 +153,8 @@
 
 .text5 {
     position: absolute;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
     top: 40%;
     right: 10%;
     padding: 1rem;
@@ -157,6 +167,8 @@
 
 .text6 {
     position: absolute;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
     bottom: 5%;
     right: 20%;
     padding: 1rem;
