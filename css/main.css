@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.stars{
+    position:fixed;inset:0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.6), transparent),
+      radial-gradient(2px 2px at 70% 60%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1.5px 1.5px at 85% 15%, rgba(255,255,255,.5), transparent),
+      radial-gradient(2px 2px at 60% 40%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1.5px 1.5px at 10% 70%, rgba(255,255,255,.5), transparent);
+    background-repeat:repeat;
+    background-size:300px 300px;
+    animation:twinkle 4s ease-in-out infinite alternate;
+    z-index:0;
+    pointer-events:none;
+  }
+  @keyframes twinkle{from{opacity:.5}to{opacity:1}}
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #1b0f2e ;
+}
+
+.homeimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.homeimg img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.hometext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.hometext p {
+  text-transform: capitalize;
+  font-size: 2rem;
+  padding: 1rem 0;
+  font-family: fantasy;
+  color: #ffb6c1;
+
+}
+
+.homebtn {
+  display: flex;
+  gap: 6rem;
+  padding-top: 2rem;
+}
+
+.yes {
+  padding: .7rem 2rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: none;
+  background-color: #e8ccd7;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.no {
+  padding: .7rem 2rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: none;
+  background-color: #e8ccd7;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.gift1{
+  position: absolute;
+  width: 15%;
+  top: 30%;
+  left: 10%;
+}
+.gift2{
+  position: absolute;
+  width: 20%;
+  top: 20%;
+  right: 15%;
+  transform: rotateZ(25deg);
+}
+/* Tablets */
+@media (max-width: 768px) {
+  .hometext p {
+    font-size: 1.5rem;
+  }
+
+  .homebtn {
+    gap: 3rem;
+  }
+
+  .gift1 {
+    width: 20%;
+    max-width: 90px;
+  }
+
+  .gift2 {
+    width: 25%;
+    max-width: 110px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .hometext p {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .homebtn {
+    gap: 1.5rem;
+    flex-direction: row;
+  }
+
+  .yes,
+  .no {
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .gift1 {
+    width: 25%;
+    max-width: 80px;
+    top: 80%;
+    left: 5%;
+  }
+
+  .gift2 {
+    width: 40%;
+    max-width: 140px;
+    top: 34%;
+    right: 0%;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+  .hometext p {
+    font-size: 1rem;
+    padding-top: 3rem;
+  }
+
+  .homebtn {
+    gap: 3rem;
+  }
+
+  .yes,
+  .no {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

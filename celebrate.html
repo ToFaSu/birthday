@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/celebrate.css">
+
+</head>
+
+<body>
+
+    
+
+    <section class="celebrate-upper">
+
+           <div id="startOverlay" style="
+      position:fixed; inset:0; z-index:999;
+      background:#1b0f2e; color:#fff3e6;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      cursor:pointer; text-align:center; font-family:sans-serif;">
+      <h1 style="font-size:2rem;">🎉 Tap to Begin 🎉</h1>
+      <p style="opacity:.7; margin-top:.5rem;">Turn your sound on for the full surprise</p>
+    </div>
+
+           <div class="stars"></div>
+
+    <h1 class="title">🎉 Happy Birthday! Hadia 🎉</h1>
+    <p class="subtitle">Make a wish, then blow out the candles</p>
+
+    <section class="celebration">
+
+        <!-- Song bar -->
+        <aside class="song-bar">
+            <h3>Now Playing</h3>
+            <div class="disc" id="disc"></div>
+            <div class="track-name" id="trackName">Happy Birthday Tune</div>
+            <div class="bars" id="bars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="controls">
+                <button class="ctrl-btn" id="prevBtn" title="Previous">⏮</button>
+                <button class="ctrl-btn" id="playBtn" title="Play/Pause">▶</button>
+                <button class="ctrl-btn" id="nextBtn" title="Next">⏭</button>
+            </div>
+            <div class="volume-row">
+                <span>🔉</span>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.6">
+            </div>
+            <audio id="audio" loop> <source src="./img/song.mp3" type="audio/mpeg"> </audio>
+        </aside>
+
+        <!-- Cake -->
+        <div class="cake-stage">
+            <div class="scene">
+                <div class="plate"></div>
+                <div class="cake" id="cake">
+
+                    <div class="candle-row" id="candleRow"></div>
+
+                    <div class="layer layer-top">
+                        <div class="frosting-drip">
+                            <svg viewBox="0 0 150 26" preserveAspectRatio="none">
+                                <path
+                                    d="M0,10 Q7,26 14,10 Q21,26 28,10 Q35,26 42,10 Q49,26 56,10 Q63,26 70,10 Q77,26 84,10 Q91,26 98,10 Q105,26 112,10 Q119,26 126,10 Q133,26 140,10 Q147,26 150,10 L150,0 L0,0 Z"
+                                    fill="#fff8f0" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-bottom"></div>
+                </div>
+            </div>
+
+            <button class="blow-btn" id="blowBtn">🕯️ Blow Out Candles</button>
+            <a href="./letter.html" class="next" id="nextbtn">next surprise </a>
+            <div class="wish-text" id="wishText">✨ Wish granted! Happy Birthday! ✨</div>
+        </div>
+
+      
+
+    </section>
+
+    <canvas id="confetti-canvas"></canvas>
+
+      <img class="d1" src="./img/d1.png" alt="">
+      <img src="./img/d1.png" alt="" class="d2">
+      <img src="./img/celebrate-img.png" alt="" class="d3">
+      <img src="./img/balloon4.png" alt="" class="d4">
+      <img src="./img/balloon1.png" alt="" class="d5">
+
+    </section>
+
+    <script>
+  console.log('Inline script loaded');
+  console.log('Overlay found:', document.getElementById('startOverlay'));
+
+  document.getElementById('startOverlay').addEventListener('click', () => {
+    console.log('Overlay clicked!');
+    document.getElementById('startOverlay').style.display = 'none';
+    const audio = document.getElementById('audio');
+    audio.play().catch(err => console.log('Play blocked:', err));
+  });
+</script>
+ 
+
+    <script src="./js/celebrate.js"></script>
+
+</body>
+
+</html>

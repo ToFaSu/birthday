@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+ :root{
+    --bg-deep:#1b0f2e;
+    --bg-mid:#2d1547;
+    --pink:#ff6fa5;
+    --gold:#ffcf6b;
+    --cream:#fff3e6;
+    --frosting:#ffe1ee;
+    --plate:#3a2154;
+    --flame-core:#fff5c0;
+    --panel:rgba(255,255,255,0.06);
+  }
+
+
+.stars {
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, .6), transparent),
+        radial-gradient(2px 2px at 70% 60%, rgba(255, 255, 255, .5), transparent),
+        radial-gradient(1.5px 1.5px at 40% 80%, rgba(255, 255, 255, .4), transparent),
+        radial-gradient(1.5px 1.5px at 85% 15%, rgba(255, 255, 255, .5), transparent),
+        radial-gradient(2px 2px at 60% 40%, rgba(255, 255, 255, .4), transparent),
+        radial-gradient(1.5px 1.5px at 10% 70%, rgba(255, 255, 255, .5), transparent);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: twinkle 4s ease-in-out infinite alternate;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.flowers {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #1b0f2e;
+    display: flex;
+}
+.final {
+    position: absolute;
+    bottom: 9%;
+    left: 43%;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: .9rem 2.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    color: #2a1440;
+    background: linear-gradient(135deg, var(--gold), var(--pink));
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 150, 120, .35);
+    transition: transform .15s ease, box-shadow .15s ease;
+    z-index: 100;
+}
+
+.bgimg {
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.cat {
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    width: 15%;
+    z-index: 3;
+    transform: rotate(-10deg);
+}
+
+.lilies1 {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 30%;
+}
+
+.lilies2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+}
+
+.lilies3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+}
+
+.text1 {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 2px 12px 2px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.text2 {
+    position: absolute;
+    bottom: 40%;
+    left: 12%;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 2px 12px 2px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.text3 {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 2px 12px 2px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.text4 {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 2px 12px 2px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.text5 {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 2px 12px 2px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.text6 {
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 2px 12px 2px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+@media (max-width: 900px) {
+  .flowers {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 6rem;
+    overflow-x: hidden;
+  }
+
+  .bgimg {
+    display: none;
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    order: 1;
+  }
+
+  .cat,
+  .lilies1,
+  .lilies2,
+  .lilies3 {
+    position: static;
+    display: block;
+    width: 45%;
+    max-width: 180px;
+    margin: 1rem auto;
+    transform: none;
+  }
+
+  .text1,
+  .text2,
+  .text3,
+  .text4,
+  .text5,
+  .text6 {
+    position: static;
+    width: 85%;
+    max-width: 320px;
+    margin: 1rem auto;
+  }
+
+  .final {
+    position: static;
+    display: inline-block;
+    margin: 2rem auto 0;
+    left: auto;
+    bottom: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .text1,
+  .text2,
+  .text3,
+  .text4,
+  .text5,
+  .text6 {
+    width: 90%;
+    padding: .8rem;
+    font-size: .9rem;
+  }
+
+  .cat,
+  .lilies1,
+  .lilies2,
+  .lilies3 {
+    width: 60%;
+    max-width: 140px;
+  }
+
+  .final {
+    padding: .75rem 1.6rem;
+    font-size: .95rem;
+  }
+}

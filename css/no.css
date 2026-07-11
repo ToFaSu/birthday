@@ -1,0 +1,121 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.stars{
+    position:fixed;inset:0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.6), transparent),
+      radial-gradient(2px 2px at 70% 60%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1.5px 1.5px at 85% 15%, rgba(255,255,255,.5), transparent),
+      radial-gradient(2px 2px at 60% 40%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1.5px 1.5px at 10% 70%, rgba(255,255,255,.5), transparent);
+    background-repeat:repeat;
+    background-size:300px 300px;
+    animation:twinkle 4s ease-in-out infinite alternate;
+    z-index:0;
+    pointer-events:none;
+  }
+  @keyframes twinkle{from{opacity:.5}to{opacity:1}}
+
+.no {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #1b0f2e ;
+}
+
+.noimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.noimg img {
+  object-fit: contain;
+  width: 30%;
+}
+
+.notext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.notext p {
+  text-transform: capitalize;
+  font-size: 2rem;
+  padding: 1rem 0;
+  font-family: fantasy;
+  color: #ffb6c1;
+
+}
+
+.nobtn {
+  display: flex;
+  gap: 6rem;
+  padding-top: 2rem;
+}
+.goback {
+  padding: .7rem 2rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: none;
+  background-color: #e8ccd7;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .notext p {
+    font-size: 1.5rem;
+  }
+
+  .nobtn {
+    gap: 3rem;
+  }
+
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .notext p {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .nobtn {
+    gap: 1.5rem;
+    flex-direction: row;
+  }
+ .noimg img {
+  object-fit: contain;
+  width: 100%;
+}
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+  .notext p {
+    font-size: 1rem;
+    padding-top: 3rem;
+  }
+
+  .nobtn {
+    gap: 3rem;
+  }
+
+ .noimg img {
+  object-fit: contain;
+  width: 100%;
+}
+}
